@@ -78,6 +78,13 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 
 .page-title{position:absolute; bottom:60px; left:105px; font-weight:700; color:#2f2f3b;}
 
+.nav{position:fixed; top:0; right:0; z-index:100; display:none; width:100%; height:100%; text-align:center; background:#1f1f48;}
+.nav ul{margin:27% 0 0;}
+.nav li{display:inline-block; margin:0 140px; font-size:56px; font-family:'Montserrat'; font-weight:700;}
+.nav a{color:#fff; transition:color .2s;}
+.nav a:hover{color:#fac24b;}
+.nav .btn-close{position:absolute; top:62px; right:107px; width:60px; height:60px; padding:0; text-indent:-9999px; border:0;background:url(../images/btn_close.png) no-repeat center center;}
+
 .content{height:100%; overflow:hidden;}
 .book-list{position:relative; width:50%; height:100%; margin:0 auto;}
 .book-list .slide-area{height:100%; text-align:center;}
