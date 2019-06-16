@@ -4,7 +4,7 @@ $(function(){
 	$(document).on('click', '.btn-page', function(){
 		var pageIdx = $(this).data('next-page');
 		$.ajax({
-			url: 'hell-escape/page/'+pageIdx+'.html',
+			url: 'page/'+pageIdx+'.html',
 			success: function(result){
 				$('.content').html(result);
 				$('html, body').scrollTop(0);
@@ -23,7 +23,7 @@ $(function(){
 	$('.go-page').on('click', function(){
 		var page = $('.go-page input').val();
 		$.ajax({
-			url: 'hell-escape/page/'+page+'.html',
+			url: 'page/'+page+'.html',
 			success: function(result){
 				$('.content').html(result);
 				$('.btn-sheet').removeClass('active');
