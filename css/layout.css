@@ -139,4 +139,10 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .book-item .title span{margin:0; font-size:14px;}
   .book-item .title span:before{position:static; width:auto; content:','; background:none;}
   .book-item .provide{position:static; margin:10px 0 0; font-size:12px; transform:rotate(0);}
+
+  .contact .inner{width:100%; box-sizing:border-box; padding:80px 20px 0; font-size:16px;}
+  .intro-txt{margin:0 0 30px; font-size:16px;}
+  .contact-info dl{float:none; width:100%; margin:0 0 30px;}
+  .contact-info dt{margin:0 0 10px;}
+  .contact-info dd br{display:none;}
 }
