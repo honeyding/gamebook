@@ -85,7 +85,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .nav a:hover{color:#fac24b;}
 .nav .btn-close{position:absolute; top:62px; right:107px; width:60px; height:60px; padding:0; text-indent:-9999px; border:0;background:url(../images/btn_close.png) no-repeat center center;}
 
-.content{height:100%; overflow:hidden;}
+.content{height:100%;}
 .content.list{background:#f6dc64;}
 .book-list{position:relative; width:50%; height:100%; margin:0 auto;}
 .book-list .slide-area{height:100%; text-align:center;}
