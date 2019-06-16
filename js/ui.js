@@ -25,11 +25,11 @@ $(function(){
 		pager: false,
 		touchEnabled: false,
 		onSliderLoad: function(){
-			$('.book-item[aria-hidden=false]').find('.info').show();
+			$('.book-item[aria-hidden=false]').find('.info .title, .info .provide').show();
 		},
 		onSlideBefore: function($slideElement, oldIndex, newIndex){
-			$('.book-item .info').fadeOut();
-			$slideElement.find('.info').fadeIn();
+			$('.info .title, .info .provide').fadeOut();
+			$slideElement.find('.info .title, .info .provide').fadeIn();
 		}
 	});
 
