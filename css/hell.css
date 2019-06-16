@@ -26,14 +26,12 @@
 .btn-area{position:absolute; bottom:26px; right:60px; width:180px;}
 .btn-area .btn-page{width:180px; height:30px; overflow:hidden; margin:8px 0 0; text-indent:-9999px;}
 
-.sheet > div{position:absolute; top:30%; left:30%; z-index:10; display:none; width:370px; box-shadow:20px 20px 70px 0 rgba(0, 0, 0, .2);}
-.sheet div img{display:block; width:370px;}
+.sheet > div{position:absolute; top:30%; left:30%; z-index:10; display:none; width:370px;}
+.sheet div img{display:block; width:370px; box-shadow:20px 20px 70px 0 rgba(0, 0, 0, .2);}
 .sheet .btn-wrap{position:absolute; top:50%; right:-140px; width:96px; overflow:hidden; transform:translateY(-50%);}
-.sheet button{width:96px; height:96px; overflow:hidden; font-size:35px; color:#fff; border:0; border-radius:50%; background:none; box-shadow:20px 20px 70px 0 rgba(0, 0, 0, .2);}
-.sheet button span{position:absolute; top:-100%; left:-100%;}
-.sheet button i{text-indent:0;}
-.sheet .btn-sheetClose{margin:0 0 94px; background:#c44c1f;}
-.sheet .btn-rotate{background:#1f1f48;}
+.sheet button{width:96px; height:96px; overflow:hidden; font-size:35px; text-indent:-9999px;  color:#fff; border:0; border-radius:50%; background:none;}
+.sheet .btn-sheetClose{margin:0 0 94px; background:#c44c1f url(../images/btn_sheetClose.png) no-repeat center center;}
+.sheet .btn-rotate{background:#1f1f48; background:#1f1f48 url(../images/btn_rotate.png) no-repeat center center;}
 .sheet .landscape .btn-wrap{right:-170px;}
 
 .go-page{position:absolute; top:0; left:0;}

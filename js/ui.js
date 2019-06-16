@@ -23,6 +23,7 @@ $(function(){
 
 	$('.book-list .slide-area').bxSlider({
 		pager: false,
+		touchEnabled: false,
 		onSliderLoad: function(){
 			$('.book-item[aria-hidden=false]').find('.info').show();
 		},
