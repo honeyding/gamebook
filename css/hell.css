@@ -41,12 +41,12 @@
     .page{top:0; transform:translateX(-50%);}
 }
 @media all and (max-width:768px){
-    .header{position:absolute; top:0; left:0; width:100%; height:70px;}
-    .btn-close{position:absolute; z-index:2; width:70px; height:70px; font-size:25px;}
-    .sheet-btn{position:static; height:70px; padding:0 80px 0 70px; font-size:13px; text-align:left; text-align:center; transform:translateY(0); line-height:70px;}
+    .header{position:absolute; top:0; left:0; width:100%; height:46px;}
+    .btn-close{position:absolute; z-index:2; width:46px; height:46px; font-size:25px; background-size:18px auto}
+    .sheet-btn{position:static; height:46px; padding:0 80px 0 70px; font-size:10px; text-align:left; text-align:center; transform:translateY(0); line-height:46px;}
     .sheet-btn span{display:inline-block; margin:0 5px 0 10px; font-size:13px;}
     .sheet-btn button{width:32%; height:30px; margin:0;}
-    .bad{left:auto; right:0; width:80px; height:70px; padding:15px 0; font-size:21px; line-height:40px;}
+    .bad{left:auto; right:0; width:80px; height:46px; padding:5px 0; font-size:21px; line-height:36px;}
     .bad p{border-top:0; border-left:1px solid #d1d1d3;}
     .bad img{width:30px;}
 
@@ -58,8 +58,10 @@
     .page img{width:100%;}
     .sheet > div,
     .sheet div img{width:58vw;}
-    .sheet .btn-wrap{width:60px; right:-75px;}
-    .sheet button{width:60px; height:60px; font-size:15px;}
-    .sheet .btn-sheetClose{margin-bottom:60px;}
+    .sheet > div{left:20%;}
+    .sheet .btn-wrap{width:50px; right:-65px;}
+    .sheet button{width:50px; height:50px; font-size:15px;}
+    .sheet .btn-sheetClose{margin-bottom:50px; background-size:12px auto;}
+    .sheet .btn-rotate{background-size:15px auto;}
     .sheet .landscape .btn-wrap{right:-105px;}
 }
