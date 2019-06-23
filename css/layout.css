@@ -72,21 +72,24 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .wrap{height:100%; overflow:hidden;}
 .main-header h1{position:absolute; top:75px; left:115px; z-index:55;}
 .main-header h1 img{width:200px;}
-.btn-nav{position:absolute; top:60px; right:105px; z-index:55; width:64px; height:64px; overflow:hidden; text-indent:-9999px; border:0; border-radius:50%; background:#1f1f48;}
-.btn-nav:before{position:absolute; top:25px; left:19px; width:27px; height:4px; content:''; border-radius:2px; background:#fff;}
-.btn-nav:after{position:absolute; bottom:25px; left:19px; width:27px; height:4px; content:''; border-radius:2px; background:#fff;}
+.btn-nav{position:absolute; top:60px; right:105px; z-index:101; width:64px; height:64px; overflow:hidden; text-indent:-9999px; border:0; border-radius:50%; background:#1f1f48;}
+.btn-nav:before{position:absolute; top:25px; left:19px; width:27px; height:4px; content:''; border-radius:2px; background:#fff; transition:all .2s;}
+.btn-nav:after{position:absolute; bottom:25px; left:19px; width:27px; height:4px; content:''; border-radius:2px; background:#fff; transition:all .2s;}
+.btn-nav.active:before{top:30px; left:14px; width:36px; transform:rotate(45deg);}
+.btn-nav.active:after{top:30px; left:14px; width:36px; transform:rotate(-45deg);}
 
 .page-title{position:absolute; bottom:100px; left:105px; z-index:55; font-weight:700; color:#2f2f3b;}
 
 .nav{position:fixed; top:0; right:0; z-index:100; display:none; width:100%; height:100%; text-align:center; background:#1f1f48;}
 .nav ul{margin:27% 0 0;}
-.nav li{display:inline-block; margin:0 140px; font-size:56px; font-family:'Montserrat'; font-weight:700;}
+.nav li{float:left; width:33.33%; font-size:56px; font-family:'Montserrat'; font-weight:700; text-align:center;}
 .nav a{color:#fff; transition:color .2s;}
+.nav li.active a,
 .nav a:hover{color:#fac24b;}
-.nav .btn-close{position:absolute; top:62px; right:107px; width:60px; height:60px; padding:0; text-indent:-9999px; border:0;background:url(../images/btn_close.png) no-repeat center center;}
 
 .content{height:100%;}
-.content.list{background:#f6dc64;}
+
+.book-wrap{position:relative; height:100%; background:#f6dc64; transition:background .2s;}
 .book-list{position:relative; width:50%; height:100%; margin:0 auto;}
 .book-list .slide-area{height:100%; text-align:center;}
 .book-list .bx-viewport{height:100%; overflow:visible !important;}
@@ -112,6 +115,19 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .contact-info dt{margin:0 0 25px;}
 .contact-info dl:last-child dd{font-size:16px; font-weight:400; line-height:1.8;}
 
+@media all and (max-width:1200px){
+  .nav li{font-size:38px;}
+  .book-item .title{top:115px; right:-100px; font-size:25px;}
+  .book-item .title span{margin:0 0 0 65px; font-size:18px;}
+  .book-item .title span:before{left:-53px; width:35px;}
+  .book-item .provide{left:-110px;}
+  .book-item img{width:300px;}
+
+  .contact .inner{width:80%; font-size:18px;}
+  .intro-txt{font-size:18px;}
+  .contact-info dd br{display:none;}
+}
+
 @media all and (max-width:768px){
   .content.list{overflow:hidden;}
   .page-title{display:none;}
@@ -120,9 +136,10 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .btn-nav{top:25px; right:20px; width:40px; height:40px;}
   .btn-nav:before{top:14px; left:12px; width:16px; height:2px;}
   .btn-nav:after{bottom:17px; left:12px; width:16px; height:2px;}
-  .nav .btn-close{top:24px; right:20px; width:40px; height:40px; background-size:18px auto;}
+  .btn-nav.active:before{top:18px; left:12px; width:20px;}
+  .btn-nav.active:after{top:18px; left:12px; width:20px;}
   .nav ul{margin:50% 0 0;}
-  .nav li{display:block; margin:0 0 50px; font-size:26px; text-align:center;}
+  .nav li{float:none; display:block; width:100%; margin:0 0 50px; font-size:26px;}
 
   .book-list{width:70%;}
   .book-list .bx-controls{bottom:40px;}
@@ -144,5 +161,4 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .intro-txt{margin:0 0 30px; font-size:16px;}
   .contact-info dl{float:none; width:100%; margin:0 0 30px;}
   .contact-info dt{margin:0 0 10px;}
-  .contact-info dd br{display:none;}
 }
