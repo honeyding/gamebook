@@ -12,7 +12,6 @@ $(function(){
 
 	$('.book-list .slide-area').bxSlider({
 		pager: false,
-		touchEnabled : (navigator.maxTouchPoints > 0),
 		onSliderLoad: function(){
 			$('.book-item[aria-hidden=false]').find('.info .title, .info .provide').show();
 		},
