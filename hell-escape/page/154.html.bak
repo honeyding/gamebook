@@ -1,7 +1,0 @@
-		<div class="page">
-			<img src="images/hell/hell_154.jpg" alt="">
-			<div class="btn-area">
-				<button class="btn-page" data-next-page="142">142 페이지로</button>
-				<button class="btn-page" data-next-page="123">123 페이지로</button>
-			</div>
-		</div>
