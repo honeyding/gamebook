@@ -60,6 +60,7 @@ textarea{resize:none;}
 input[type="submit"], button{cursor:pointer;}
 button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .blind{position:absolute; top:0; left:-1000px; width:0; height:0; font-size:0; line-height:0;}
+.alert{display:none;}
 
 /* main list */
 .wrap{height:100%; overflow:hidden;}
@@ -159,4 +160,9 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .intro-txt{margin:0 0 30px; font-size:16px;}
   .contact-info dl{float:none; width:100%; margin:0 0 30px;}
   .contact-info dt{margin:0 0 10px;}
+}
+
+@media all and (orientation:landscape) and (max-width:767px){
+  .alert{position:fixed; top:0; left:0; z-index:1000; width:100%; height:100%; display:block; background:#1f1f48;}
+  .alert p{position:absolute; top:50%; left:50%; font-size:25px; color:#fff; transform:translate(-50%, -50%);}
 }
