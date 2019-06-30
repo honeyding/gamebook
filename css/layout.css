@@ -95,6 +95,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .book-list .bx-prev:before{left:0; border-top:3px solid #2f2f3b; border-left:3px solid #2f2f3b; transform:rotate(-45deg);}
 .book-list .bx-next{padding:0 34px 0 0;}
 .book-list .bx-next:before{right:0; border-top:3px solid #2f2f3b; border-right:3px solid #2f2f3b; transform:rotate(45deg);}
+.book-list .bx-controls{bottom:60px;}
 .book-item{position:relative; height:100%;}
 .book-item > div{position:absolute; top:50%; left:50%; display:inline-block; padding:0 70px; transform:translate(-50%, -50%)}
 .book-item img{width:480px;}
