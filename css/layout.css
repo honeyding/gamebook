@@ -112,6 +112,8 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 }
 
 @media all and (max-width:1200px){
+  .main-header h1{top:55px; left:65px;}
+  .btn-nav{top:40px; right:65px;}
   .nav li{font-size:38px;}
   .book-item .title{top:210px; right:-145px; font-size:25px;}
   .book-item .title span{margin:0 0 0 65px; font-size:18px;}
@@ -134,7 +136,6 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .btn-nav:after{bottom:17px; left:12px; width:16px; height:2px;}
   .btn-nav.active:before{top:18px; left:12px; width:20px;}
   .btn-nav.active:after{top:18px; left:12px; width:20px;}
-  .nav ul{margin:50% 0 0;}
   .nav li{float:none; display:block; width:100%; margin:0 0 50px; font-size:26px;}
 
   .book-list{width:70%;}
