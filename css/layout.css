@@ -40,14 +40,6 @@
   src: url("fonts/fa-solid-900.eot");
   src: url("fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fonts/fa-solid-900.woff2") format("woff2"), url("fonts/fa-solid-900.woff") format("woff"), url("fonts/fa-solid-900.ttf") format("truetype"), url("fonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
-.fa,
-.fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900; }
-.far {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
-
 /* common */
 html, body{height:100%;}
 body{margin:0; padding:0; font-family:'Noto Sans Korean'; font-size:16px; font-weight:400; line-height:1.2; -webkit-text-size-adjust:none;}
