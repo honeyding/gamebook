@@ -113,7 +113,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 
 @media all and (max-width:1200px){
   .nav li{font-size:38px;}
-  .book-item .title{top:135px; right:-80px; font-size:25px;}
+  .book-item .title{top:210px; right:-145px; font-size:25px;}
   .book-item .title span{margin:0 0 0 65px; font-size:18px;}
   .book-item .title span:before{left:-53px; width:35px;}
   .book-item .provide{left:-90px; bottom:90px;}
