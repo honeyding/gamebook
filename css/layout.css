@@ -119,7 +119,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .book-item .provide{left:-90px; bottom:90px;}
   .book-item img{width:300px;}
 
-  .contact .inner{width:80%; font-size:18px;}
+  .contact .inner{width:80%; padding:200px 0 0; font-size:18px;}
   .intro-txt{font-size:18px;}
   .contact-info dd br{display:none;}
 }
