@@ -122,7 +122,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .book-item .provide{left:-90px; bottom:90px;}
   .book-item img{width:300px;}
 
-  .contact .inner{width:80%; padding:200px 0 0; font-size:18px;}
+  .contact .inner{width:100%; box-sizing:border-box; padding:200px 65px 0; font-size:18px;}
   .intro-txt{font-size:18px;}
   .contact-info dd br{display:none;}
 }
@@ -155,7 +155,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .book-item .title span:before{position:static; width:auto; content:','; background:none;}
   .book-item .provide{position:static; margin:10px 0 0; font-size:12px; transform:rotate(0);}
 
-  .contact .inner{width:100%; box-sizing:border-box; padding:80px 20px 0; font-size:16px;}
+  .contact .inner{padding:80px 20px 0; font-size:16px;}
   .intro-txt{margin:0 0 30px; font-size:16px;}
   .contact-info dl{float:none; width:100%; margin:0 0 30px;}
   .contact-info dt{margin:0 0 10px;}
