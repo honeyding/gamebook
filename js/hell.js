@@ -41,6 +41,7 @@ $(function(){
 	$('.btn-sheet').on('click', function(){
 		type = $(this).data('sheet');
 		$(this).addClass('active').siblings('button').removeClass('active');
+		$('.sheet').show();
 		$('.sheet > div').hide();
 		$('.sheet-'+type).show();
 	});
@@ -64,6 +65,7 @@ $(function(){
 		if($('.sheet img').is(':visible')){
 			$('.sheet > div').hide().removeAttr('style');
 			$('.btn-sheet').removeClass('active');
+			$('.sheet').hide();
 		}
 	});
 
