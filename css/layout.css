@@ -95,7 +95,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .book-list .bx-next:before{position:absolute; top:2px; right:0; width:16px; height:16px; box-sizing:border-box; content:''; border-top:3px solid #2f2f3b; border-right:3px solid #2f2f3b; border-radius:2px; transform:rotate(45deg);}
 .book-item{position:relative; height:100%;}
 .book-item > div{position:absolute; top:50%; left:50%; display:inline-block; padding:0 70px; transform:translate(-50%, -50%)}
-/*.book-item .cover{box-shadow:20px 20px 25px -5px rgba(33, 33, 33, .2);}*/
+.book-item img{width:auto; height:35vw;}
 .book-item .title{position:absolute; top:190px; right:-110px; display:none; font-size:32px; font-weight:700; color:#2f2f3b; transform:rotate(90deg);}
 .book-item .title span{position:relative; display:inline-block; margin:0 0 0 95px; font-size:24px;}
 .book-item .title span:before{position:absolute; top:14px; left:-74px; width:45px; height:2px; content:''; background:#2f2f3b;}
@@ -112,7 +112,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .book-item .title span{margin:0 0 0 65px; font-size:18px;}
   .book-item .title span:before{left:-53px; width:35px;}
   .book-item .provide{left:-90px; bottom:90px;}
-  .book-item img{width:300px;}
+  .book-item img{width:300px; height:auto;}
 
   .contact .inner{width:80%; font-size:18px;}
   .intro-txt{font-size:18px;}
