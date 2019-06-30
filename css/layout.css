@@ -89,13 +89,14 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .book-list .bx-wrapper{height:100%;}
 .book-list .bx-controls{position:absolute; bottom:100px; left:0; width:100%; text-align:center;}
 .book-list .bx-controls a{position:relative; display:inline-block; margin:0 42px; font-weight:700; color:#2f2f3b;}
+.book-list .bx-controls a:before{position:absolute; top:2px; width:16px; height:16px; box-sizing:border-box; content:''; border-radius:2px;}
 .book-list .bx-prev{padding:0 0 0 34px;}
-.book-list .bx-prev:before{position:absolute; top:2px; left:0; width:16px; height:16px; box-sizing:border-box; content:''; border-top:3px solid #2f2f3b; border-left:3px solid #2f2f3b; border-radius:2px; transform:rotate(-45deg);}
+.book-list .bx-prev:before{left:0; border-top:3px solid #2f2f3b; border-left:3px solid #2f2f3b; transform:rotate(-45deg);}
 .book-list .bx-next{padding:0 34px 0 0;}
-.book-list .bx-next:before{position:absolute; top:2px; right:0; width:16px; height:16px; box-sizing:border-box; content:''; border-top:3px solid #2f2f3b; border-right:3px solid #2f2f3b; border-radius:2px; transform:rotate(45deg);}
+.book-list .bx-next:before{right:0; border-top:3px solid #2f2f3b; border-right:3px solid #2f2f3b; transform:rotate(45deg);}
 .book-item{position:relative; height:100%;}
 .book-item > div{position:absolute; top:50%; left:50%; display:inline-block; padding:0 70px; transform:translate(-50%, -50%)}
-.book-item img{width:auto; height:35vw;}
+.book-item img{width:480px;}
 .book-item .title{position:absolute; top:190px; right:-110px; display:none; font-size:32px; font-weight:700; color:#2f2f3b; transform:rotate(90deg);}
 .book-item .title span{position:relative; display:inline-block; margin:0 0 0 95px; font-size:24px;}
 .book-item .title span:before{position:absolute; top:14px; left:-74px; width:45px; height:2px; content:''; background:#2f2f3b;}
@@ -106,13 +107,17 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .contact-info dt{margin:0 0 25px; font-family:'Montserrat';}
 .contact-info dl:last-child dd{font-size:16px; font-weight:400; line-height:1.8;}
 
+@media all and (min-width:1921px){
+  .book-item img{width:700px;}
+}
+
 @media all and (max-width:1200px){
   .nav li{font-size:38px;}
   .book-item .title{top:135px; right:-80px; font-size:25px;}
   .book-item .title span{margin:0 0 0 65px; font-size:18px;}
   .book-item .title span:before{left:-53px; width:35px;}
   .book-item .provide{left:-90px; bottom:90px;}
-  .book-item img{width:300px; height:auto;}
+  .book-item img{width:300px;}
 
   .contact .inner{width:80%; font-size:18px;}
   .intro-txt{font-size:18px;}
