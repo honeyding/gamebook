@@ -115,6 +115,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .main-header h1{top:55px; left:65px;}
   .btn-nav{top:40px; right:65px;}
   .nav li{font-size:38px;}
+  .page-title{bottom:55px; left:65px;}
   .book-item .title{top:210px; right:-145px; font-size:25px;}
   .book-item .title span{margin:0 0 0 65px; font-size:18px;}
   .book-item .title span:before{left:-53px; width:35px;}
@@ -126,16 +127,16 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .contact-info dd br{display:none;}
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:767px){
   .content.list{overflow:hidden;}
   .page-title{display:none;}
   .main-header h1{top:30px; left:20px;}
   .main-header h1 img{width:130px;}
   .btn-nav{top:25px; right:20px; width:40px; height:40px;}
-  .btn-nav:before{top:14px; left:12px; width:16px; height:2px;}
-  .btn-nav:after{bottom:17px; left:12px; width:16px; height:2px;}
-  .btn-nav.active:before{top:18px; left:12px; width:20px;}
-  .btn-nav.active:after{top:18px; left:12px; width:20px;}
+  .btn-nav:before{top:15px; left:12px; width:16px; height:2px;}
+  .btn-nav:after{bottom:16px; left:12px; width:16px; height:2px;}
+  .btn-nav.active:before{top:19px; left:10px; width:20px;}
+  .btn-nav.active:after{top:19px; left:10px; width:20px;}
   .nav li{float:none; display:block; width:100%; margin:0 0 50px; font-size:26px;}
 
   .book-list{width:70%;}
