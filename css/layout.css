@@ -134,7 +134,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .page-title{display:none;}
   .main-header h1{top:30px; left:20px;}
   .main-header h1 img{width:130px;}
-  .btn-nav{top:25px; right:20px; width:40px; height:40px;}
+  .btn-nav{top:22px; right:20px; width:40px; height:40px;}
   .btn-nav:before{top:15px; left:12px; width:16px; height:2px;}
   .btn-nav:after{bottom:16px; left:12px; width:16px; height:2px;}
   .btn-nav.active:before{top:19px; left:10px; width:20px;}
