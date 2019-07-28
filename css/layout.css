@@ -72,7 +72,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .btn-nav.active:before{top:30px; left:14px; width:36px; transform:rotate(45deg);}
 .btn-nav.active:after{top:30px; left:14px; width:36px; transform:rotate(-45deg);}
 
-.page-title{position:absolute; bottom:100px; left:105px; z-index:55; font-weight:700; color:#2f2f3b;}
+.page-title{position:absolute; bottom:60px; left:105px; z-index:55; font-weight:700; font-family:'Montserrat'; color:#2f2f3b;}
 
 .nav{position:fixed; top:0; right:0; z-index:100; display:none; width:100%; height:100%; text-align:center; background:#1f1f48;}
 .nav ul{position:absolute; top:50%; left:50%; width:90%; transform:translate(-50%, -50%);}
@@ -89,7 +89,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .book-list .bx-viewport{height:100%; overflow:visible !important;}
 .book-list .bx-wrapper{height:100%;}
 .book-list .bx-controls{position:absolute; bottom:100px; left:0; width:100%; text-align:center;}
-.book-list .bx-controls a{position:relative; display:inline-block; margin:0 42px; font-weight:700; color:#2f2f3b;}
+.book-list .bx-controls a{position:relative; display:inline-block; margin:0 42px; font-weight:700; font-family:'Montserrat'; color:#2f2f3b;}
 .book-list .bx-controls a:before{position:absolute; top:2px; width:16px; height:16px; box-sizing:border-box; content:''; border-radius:2px;}
 .book-list .bx-prev{padding:0 0 0 34px;}
 .book-list .bx-prev:before{left:0; border-top:3px solid #2f2f3b; border-left:3px solid #2f2f3b; transform:rotate(-45deg);}
@@ -153,7 +153,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
   .book-item img{width:230px;}
   .book-item .info{height:66px; padding:20px 0 0; text-align:center;}
   .book-item .title{position:static; font-size:18px; transform:rotate(0);}
-  .book-item .title span{margin:0; font-size:14px;}
+  .book-item .title span{margin:0; font-size:18px;}
   .book-item .title span:before{position:static; width:auto; content:','; background:none;}
   .book-item .provide{position:static; margin:10px 0 0; font-size:12px; transform:rotate(0);}
 
