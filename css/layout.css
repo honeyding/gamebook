@@ -67,8 +67,8 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .main-header h1{position:absolute; top:75px; left:115px; z-index:55;}
 .main-header h1 img{width:200px;}
 .btn-nav{position:absolute; top:60px; right:105px; z-index:101; width:64px; height:64px; overflow:hidden; text-indent:-9999px; border:0; border-radius:50%; background:#1f1f48;}
-.btn-nav:before{position:absolute; top:25px; left:19px; width:27px; height:4px; content:''; border-radius:2px; background:#fff; transition:all .2s;}
-.btn-nav:after{position:absolute; bottom:25px; left:19px; width:27px; height:4px; content:''; border-radius:2px; background:#fff; transition:all .2s;}
+.btn-nav:before{position:absolute; top:25px; left:19px; width:27px; height:3px; content:''; border-radius:2px; background:#fff; transition:all .2s;}
+.btn-nav:after{position:absolute; bottom:25px; left:19px; width:27px; height:3px; content:''; border-radius:2px; background:#fff; transition:all .2s;}
 .btn-nav.active:before{top:30px; left:14px; width:36px; transform:rotate(45deg);}
 .btn-nav.active:after{top:30px; left:14px; width:36px; transform:rotate(-45deg);}
 
