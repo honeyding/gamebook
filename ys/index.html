@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<!-- <title>이스1 - 전율의 요괴탑</title> -->
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/ys.css">
+</head>
+
+<body>
+	<div class="go-page">
+		<input type="text"><button>go</button>
+	</div>
+	<div class="ys-wrap">
+		<div class="header">
+			<h1 class="blind">이스1 - 전율의 요괴탑</h1>
+		</div>
+		<div class="content">
+			<div class="inner">
+				<div class="page">
+					<button class="btn-page" data-next-page="back"><img src="../images/ys/ys_cover.jpg" alt=""></button>
+				</div>
+			</div>
+		</div>
+		<div class="status">
+			<h2>스테이터스</h2>
+			<div>
+				<h3>용기 점수 체크표</h3>
+				<div>
+					<button type="button" class="btn-minus">-</button>
+					<input type="text" value="0" readonly>
+					<button type="button" class="btn-plus">+</button>
+				</div>
+			</div>
+			<div>
+				<h3>숙련 점수 체크표</h3>
+				<div>
+					<button type="button" class="btn-minus">-</button>
+					<input type="text" value="0" readonly>
+					<button type="button" class="btn-plus">+</button>
+				</div>
+			</div>
+			<div>
+				<h3>아이템 체크표</h3>
+				<dl class="weapon">
+					<dt>검</dt>
+					<dd><span class="item">없음</span>
+						<!-- <div class="select">
+							<span>없음</span>
+							<ul class="option">
+								<li>없음</li>
+								<li>단검</li>
+								<li>장검</li>
+								<li>타르올</li>
+								<li>은검</li>
+							</ul>
+						</div> -->
+					</dd>
+				</dl>
+				<dl class="shield">
+					<dt>방패</dt>
+					<dd><span class="item">없음</span>
+						<!-- <div class="select">
+							<span>없음</span>
+							<ul class="option">
+								<li>없음</li>
+								<li>미들 실드</li>
+								<li>은 방패</li>
+							</ul>
+						</div> -->
+					</dd>
+				</dl>
+				<dl class="armor">
+					<dt>갑옷</dt>
+					<dd><span class="item">없음</span>
+						<!-- <div class="select">
+							<span>없음</span>
+							<ul class="option">
+								<li>없음</li>
+								<li>철갑옷</li>
+								<li>리플렉스</li>
+								<li>은갑옷</li>
+							</ul>
+						</div> -->
+					</dd>
+				</dl>
+				<dl class="ring">
+					<dt>반지</dt>
+					<dd>
+						<div class="select">
+							<span>없음</span>
+							<ul class="option">
+								<li>없음</li>
+								<!-- <li>반지 메일</li>
+								<li>파워 링</li>
+								<li>타이머 반지</li>
+								<li>치료 반지</li>
+								<li>에빌 반지</li> -->
+							</ul>
+						</div>
+					</dd>
+				</dl>
+				<dl class="etc">
+					<dt>그외 아이템</dt>
+					<dd>
+						<!-- 크라제의 약<br>
+					가면마스크<br>
+					커다란 열쇠<br>
+					은제 하모니카<br>
+					마법봉<br>
+					해머<br>
+					액체가 든 작은병<br>
+					여신상이 있는 항목에서 -22를한 항목으로 -->
+					</dd>
+				</dl>
+			</div>
+			<div>
+				<h3>알파벳 체크표</h3>
+				<div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-a">
+						<label for="alphabet-a">A</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-b">
+						<label for="alphabet-b">B</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-c">
+						<label for="alphabet-c">C</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-d">
+						<label for="alphabet-d">D</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-e">
+						<label for="alphabet-e">E</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-f">
+						<label for="alphabet-f">F</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-g">
+						<label for="alphabet-g">G</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-h">
+						<label for="alphabet-h">H</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-i">
+						<label for="alphabet-i">I</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-j">
+						<label for="alphabet-j">J</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-k">
+						<label for="alphabet-k">K</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-l">
+						<label for="alphabet-l">L</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-m">
+						<label for="alphabet-m">M</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-n">
+						<label for="alphabet-n">N</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-o">
+						<label for="alphabet-o">O</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-p">
+						<label for="alphabet-p">P</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-q">
+						<label for="alphabet-q">Q</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-r">
+						<label for="alphabet-r">R</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-s">
+						<label for="alphabet-s">S</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-t">
+						<label for="alphabet-t">T</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-u">
+						<label for="alphabet-u">U</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-v">
+						<label for="alphabet-v">V</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-w">
+						<label for="alphabet-w">W</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-x">
+						<label for="alphabet-x">X</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-y">
+						<label for="alphabet-y">Y</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="alphabet-z">
+						<label for="alphabet-z">Z</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="alert">
+		<p>가로모드는 지원하지 않습니다.</p>
+	</div>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/ys.js"></script>
+</body>
+
+</html>

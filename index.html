@@ -13,6 +13,7 @@
 	<header class="main-header">
 		<h1><a href="/gamebook/"><img src="images/logo.png" alt="GAME BOOK"></a></h1>
 		<button type="button" class="btn-nav">메뉴</button>
+		<button type="button" class="btn-dark">dark</button>
 	</header>
 	<div class="nav">
 		<ul>
@@ -30,7 +31,20 @@
 						<div>
 							<div class="cover"><a href="hell-escape/"><img src="images/book_white.png" alt="지옥섬 대탈출"></a></div>
 							<div class="info">
-								<strong class="title">지옥섬 대탈출 <span>1990</span></strong>
+								<div class="title">
+									<strong>지옥섬 대탈출 <span>1990</span></strong>
+								</div>
+								<p class="provide">자료제공: 헌소년</p>
+							</div>
+						</div>
+					</div>
+					<div class="book-item">
+						<div>
+							<div class="cover"><a href="ys/"><img src="images/book_ys.png" alt="지옥섬 대탈출"></a></div>
+							<div class="info">
+								<div class="title">
+									<strong>이스 - 전율의 요괴탑 <span>1994</span></strong>
+								</div>
 								<p class="provide">자료제공: 헌소년</p>
 							</div>
 						</div>
@@ -39,18 +53,22 @@
 						<div>
 							<div class="cover"><img src="images/book_red.png" alt="개발자에게 문의주세요"></div>
 							<div class="info">
-								<strong class="title">개발자에게 문의주세요</strong>
+								<div class="title">
+									<strong>개발자에게 문의주세요</strong>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="book-item">
+					<!-- <div class="book-item">
 						<div>
 							<div class="cover"><img src="images/book_navy.png" alt="개발자에게 문의주세요"></div>
 							<div class="info">
-								<strong class="title">개발자에게 문의주세요</strong>
+								<div class="title">
+									<strong>개발자에게 문의주세요</strong>
+								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -61,6 +79,7 @@
 </div>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
 <script src="js/jquery.bxslider.js"></script>
 <script src="js/ui.js"></script>
 </body>
