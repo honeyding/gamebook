@@ -1,6 +1,9 @@
 @charset 'utf-8';
 
 .hell-wrap{position:relative; height:100%;}
+.dark-mode{background:#000}
+.dark-mode .page{filter:invert(100%);}
+.dark-mode .page img{opacity:.5;}
 
 /* header */
 .header{position:fixed; top:0; left:0; width:275px; height:100%; z-index:2; background:#ededf1;}

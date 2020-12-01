@@ -23,7 +23,7 @@
 .page .btn-area .btn-half{float:left; width:49%;}
 .page .btn-area .btn-half + .btn-half{float:right;}
 .page .btn-area .btn-full{width:100%;}
-.page img{max-width:800px;}
+.page img{width:100%; max-width:800px;}
 .go-page{position:absolute; top:0; left:0; z-index:100;}
 
 /* status */
