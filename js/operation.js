@@ -1,43 +1,48 @@
-$(function(){
+$(function () {
+
+	var operationPageSave = $.cookie('operationPageSave');
 
 	//page
-	$(document).on('click', '.btn-page', function(){
+	$(document).on('click', '.btn-page', function () {
 		var pageIdx = $(this).data('next-page');
+		$.cookie('operationPageSave', pageIdx, {
+			'expires': 365
+		});
 		$.ajax({
-			url: 'page/'+pageIdx+'.html',
-			success: function(result){
+			url: 'page/' + pageIdx + '.html',
+			success: function (result) {
 				$('.content').html(result);
-				if($('.page[data-aim]').length){
+				if ($('.page[data-aim]').length) {
 					$('.aim-select').show();
 					cnt = $('.page').data('aim');
 				}
-				if($('.page[data-result]').length){
+				if ($('.page[data-result]').length) {
 					// alert()
-					$('.btn-page').on('click', function(){
+					$('.btn-page').on('click', function () {
 						$('.aim-select').hide();
 						$('.aim-select input:checkbox').prop('checked', false).attr('disabled', false);
 					});
 				}
 			}
 		});
-		if($('.sheet > div').is(':visible')){
+		if ($('.sheet > div').is(':visible')) {
 			$('.sheet > div').hide();
 		}
 	});
 
-	$('.go-page').on('click', function(){
+	$('.go-page').on('click', function () {
 		var page = $('.go-page input').val();
 		$.ajax({
-			url: 'page/'+page+'.html',
-			success: function(result){
+			url: 'page/' + page + '.html',
+			success: function (result) {
 				$('.content').html(result);
-				if($('.page[data-aim]').length){
+				if ($('.page[data-aim]').length) {
 					$('.aim-select').show();
 					cnt = $('.page').data('aim');
 				}
-				if($('.page[data-result]').length){
+				if ($('.page[data-result]').length) {
 					// alert()
-					$('.btn-page').on('click', function(){
+					$('.btn-page').on('click', function () {
 						$('.aim-select').hide();
 						$('.aim-select input:checkbox').prop('checked', false).attr('disabled', false);
 					});
@@ -47,12 +52,12 @@ $(function(){
 	});
 
 	//aim
-	$('.aim-select input').on('change', function(){
-		$('.aim-select .checkbox').each(function(){
+	$('.aim-select input').on('change', function () {
+		$('.aim-select .checkbox').each(function () {
 			var num = $('.aim-select input:checkbox:checked').length;
-			if(num == cnt){
+			if (num == cnt) {
 				$('.aim-select input:checkbox:not(:checked)').attr('disabled', true)
-			}else{
+			} else {
 				$('.aim-select input').attr('disabled', false)
 			}
 		});
