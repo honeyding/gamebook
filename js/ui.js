@@ -1,22 +1,22 @@
 $(function () {
 
 	//dark mode
-	var dark = $.cookie('darkMode');
-	if (dark) {
-		$('html').addClass('dark-mode');
-	}
+	// var dark = $.cookie('darkMode');
+	// if (dark) {
+	// 	$('html').addClass('dark-mode');
+	// }
 
-	$('.btn-dark').click(function () {
-		if ($('html').hasClass('dark-mode')) {
-			$('html').removeClass('dark-mode');
-			$.removeCookie('darkMode');
-		} else {
-			$('html').addClass('dark-mode');
-			$.cookie('darkMode', true, {
-				'expires': 365
-			});
-		}
-	});
+	// $('.btn-dark').click(function () {
+	// 	if ($('html').hasClass('dark-mode')) {
+	// 		$('html').removeClass('dark-mode');
+	// 		$.removeCookie('darkMode');
+	// 	} else {
+	// 		$('html').addClass('dark-mode');
+	// 		$.cookie('darkMode', true, {
+	// 			'expires': 365
+	// 		});
+	// 	}
+	// });
 
 	$('.btn-nav').on('click', function () {
 		if ($('.nav').is(':hidden')) {
