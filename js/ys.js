@@ -84,7 +84,7 @@ $(function () {
 
 	//page
 	$(document).on('click', '.btn-reset', function () {
-		location.href = '/ys/';
+		location.href = '/gamebook/ys/';
 		localStorage.removeItem('ysPageSave');
 		localStorage.removeItem('brave');
 		localStorage.removeItem('skill');

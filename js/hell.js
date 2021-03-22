@@ -9,17 +9,17 @@ $(function () {
 	// 	$('html').addClass('dark-mode');
 	// }
 
-	$('.btn-dark').click(function () {
-		if ($('html').hasClass('dark-mode')) {
-			$('html').removeClass('dark-mode');
-			$.removeCookie('darkMode');
-		} else {
-			$('html').addClass('dark-mode');
-			$.cookie('darkMode', true, {
-				'expires': 365
-			});
-		}
-	});
+	// $('.btn-dark').click(function () {
+	// 	if ($('html').hasClass('dark-mode')) {
+	// 		$('html').removeClass('dark-mode');
+	// 		$.removeCookie('darkMode');
+	// 	} else {
+	// 		$('html').addClass('dark-mode');
+	// 		$.cookie('darkMode', true, {
+	// 			'expires': 365
+	// 		});
+	// 	}
+	// });
 
 	//page save
 	if (hellPageSave) {
@@ -62,7 +62,7 @@ $(function () {
 	});
 
 	$(document).on('click', '.btn-reset', function(){
-		location.href = '/hell-escape/';
+		location.href = '/gamebook/hell-escape/';
 		localStorage.removeItem('hellPageSave');
 		localStorage.removeItem('badMark');
 	});
