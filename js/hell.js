@@ -1,13 +1,13 @@
 $(function () {
 
-	var dark = $.cookie('darkMode');
-	var hellPageSave = $.cookie('hellPageSave');
-	var badMark = $.cookie('badMark');
+	var dark = localStorage.getItem('darkMode');
+	var hellPageSave = localStorage.getItem('hellPageSave');
+	var badMark = localStorage.getItem('badMark');
 
 	//dark mode
-	if (dark) {
-		$('html').addClass('dark-mode');
-	}
+	// if (dark) {
+	// 	$('html').addClass('dark-mode');
+	// }
 
 	$('.btn-dark').click(function () {
 		if ($('html').hasClass('dark-mode')) {
@@ -40,9 +40,7 @@ $(function () {
 	});
 	$(document).on('click', '.btn-page', function () {
 		var pageIdx = $(this).data('next-page');
-		$.cookie('hellPageSave', pageIdx, {
-			'expires': 365
-		});
+		localStorage.setItem('hellPageSave', pageIdx);
 		$.ajax({
 			url: 'page/' + pageIdx + '.html',
 			success: function (result) {
@@ -53,26 +51,20 @@ $(function () {
 					var num = parseInt($('.bad span').text());
 					var sum = $('.page').data('bad') + num;
 					$('.bad span').text(sum);
-					$.cookie('badMark', sum, {
-						'expires': 365
-					});
+					localStorage.setItem('badMark', sum);
 				}
 				var location = 'page/' + pageIdx + '.html';
-				history.pushState(location, null, null);
 			}
 		});
 		if ($('.sheet > div').is(':visible')) {
 			$('.sheet > div').hide();
 		}
 	});
-	$(window).bind('popstate', function (event) {
-		var data = event.originalEvent.state;
-		$.ajax({
-			url: data,
-			success: function (result) {
-				$('.content').html(result);
-			}
-		});
+
+	$(document).on('click', '.btn-reset', function(){
+		location.href = '/hell-escape/';
+		localStorage.removeItem('hellPageSave');
+		localStorage.removeItem('badMark');
 	});
 
 	$('.btn-go').on('click', function () {

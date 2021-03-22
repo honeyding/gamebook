@@ -12,12 +12,13 @@
 .logo img{width:170px;}
 .btn-close{position:relative; display:block; width:100%; height:180px; overflow:hidden; font-size:35px; text-indent:-9999px; color:#fff; border:0; background:#1f1f48 url(../images/icon_close_all.png) no-repeat center center;}
 .btn-close span{position:absolute; top:-100%; left:-100%;}
+.btn-reset{display:block; width:136px; height:54px; margin:20px auto 0; font-size:20px; color:#fff; border:0; border-radius:27px; background:#86869b;}
 .util{text-align:center;}
 .sheet-btn{position:absolute; top:50%; left:0; transform:translateY(-70%); font-size:20px;}
 .sheet-btn span{display:block; margin:0 0 30px; color:#86869b;}
 .sheet-btn button{width:136px; height:54px; margin:0 0 16px; color:#fff; border:0; border-radius:27px; background:#86869b; transition:background .2s;}
 .sheet-btn button.active{background:#c44c1f;}
-.bad{position:absolute; bottom:0; left:0; width:100%; height:275px; box-sizing:border-box; padding:0 46px; font-size:40px; font-weight:700; line-height:275px; color:#333; }
+.bad{position:absolute; bottom:0; left:0; width:100%; height:275px; box-sizing:border-box; padding:0 46px; font-size:40px; font-weight:700; line-height:275px; color:#333;}
 .bad p{border-top:2px solid #d1d1d3;}
 .bad img{margin:-5px 5px 0 0; vertical-align:middle;}
 
@@ -47,10 +48,12 @@
 @media all and (max-width:768px){
     .header{position:absolute; top:0; left:0; width:100%; height:60px;}
     .btn-close{position:absolute; z-index:2; width:60px; height:60px; font-size:25px; background:#1f1f48 url(../images/icon_close_all.png) no-repeat center center; background-size:18px auto}
-    .sheet-btn{position:static; height:60px; padding:0 80px 0 60px; font-size:11px; text-align:left; text-align:center; transform:translateY(0); line-height:60px;}
-    .sheet-btn span{display:inline-block; margin:0 5px 0 0;}
-    .sheet-btn button{width:30%; height:30px; margin:0 2px;}
-    .bad{left:auto; right:0; width:80px; height:60px; padding:15px 0; font-size:21px; line-height:30px;}
+    .btn-reset{position:absolute; top:15px; left:70px; width:50px; height:30px; margin:0; font-size:11px;}
+    .sheet-btn{position:relative; top:0; height:60px; padding:0 65px 0 130px; font-size:11px; text-align:left; text-align:center; transform:translateY(0); line-height:60px;}
+    .sheet-btn:before{position:absolute; top:15px; left:130px; width:1px; height:30px; content:''; background:#d1d1d3;}
+    .sheet-btn span{display:none; margin:0 5px 0 0;}
+    .sheet-btn button{width:42%; height:30px; margin:0 2px;}
+    .bad{left:auto; right:0; width:65px; height:60px; padding:15px 0; font-size:21px; line-height:30px;}
     .bad p{border-top:0; border-left:1px solid #d1d1d3;}
     .bad img{width:30px; margin:-5px 0 0;}
 
