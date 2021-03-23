@@ -18,6 +18,9 @@ $(function () {
 	var ysRingList = localStorage.getItem('ysRingList');
 	var check = localStorage.getItem('check');
 
+	function pad(n) {
+	    return (n < 10 && n >= 0) ? ('0' + n) : n;
+	}
 	var checkLength = $('.check-wrap .checkbox').length;
 	for (i = 0; i < checkLength; i++) {
 		checkArr.push(0);
@@ -41,10 +44,10 @@ $(function () {
 			success: function (result) {
 				$('.content .inner').html(result);
 				if (brave) {
-					$('.brave').find('input').val(brave);
+					$('.brave').find('input').val(pad(brave));
 				}
 				if (skill) {
-					$('.skill').find('input').val(skill);
+					$('.skill').find('input').val(pad(skill));
 				}
 				if (ysWeapon) {
 					$('.weapon .item').text(ysWeapon);
@@ -187,7 +190,7 @@ $(function () {
 	$('.btn-plus').on('click', function () {
 		var value = $(this).siblings('input').val();
 		var total = value * 1 + step;
-		$(this).siblings('input').val(total);
+		$(this).siblings('input').val(pad(total));
 		if ($(this).parent().hasClass('brave')) {
 			localStorage.setItem('brave', total);
 		}
@@ -198,7 +201,7 @@ $(function () {
 	$('.btn-minus').on('click', function () {
 		var value = $(this).siblings('input').val();
 		var total = value * 1 - step;
-		$(this).siblings('input').val(total);
+		$(this).siblings('input').val(pad(total));
 		if ($(this).parent().hasClass('brave')) {
 			localStorage.setItem('brave', total);
 		}
