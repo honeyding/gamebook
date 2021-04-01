@@ -14,6 +14,16 @@
 @font-face {
     font-family:'Noto Sans Korean';
     font-style:normal;
+    font-weight:500;
+    src:local('Noto Sans '), local('NotoSans-Medium'),
+    url('fonts/NotoSansKR-Medium-Hestia.eot'),
+    url('fonts/NotoSansKR-Medium-Hestia.eot?#iefix') format('embedded-opentype'),
+    url('fonts/NotoSansKR-Medium-Hestia.woff') format('woff'),
+    url('fonts/NotoSansKR-Medium-Hestia.otf') format('opentype');
+}
+@font-face {
+    font-family:'Noto Sans Korean';
+    font-style:normal;
     font-weight:700;
     src:local('Noto Sans Bold'), local('NotoSans-Bold'),
     url('fonts/NotoSansKR-Bold-Hestia.eot'),
@@ -31,7 +41,8 @@
     url('fonts/fa-regular-400.woff2') format('woff2'),
     url('fonts/fa-regular-400.woff') format('woff'),
     url('fonts/fa-regular-400.ttf') format('truetype'),
-    url('fonts/fa-regular-400.svg#fontawesome') format('svg'); }
+    url('fonts/fa-regular-400.svg#fontawesome') format('svg');
+}
 
 /* common */
 html, body{height:100%;}
@@ -103,6 +114,43 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .contact-info dl{float:left; width:50%; font-weight:700;}
 .contact-info dt{margin:0 0 20px; font-family:'Montserrat';}
 .contact-info dl:last-child dd{font-weight:400; line-height:1.8;}
+
+/* scrollbar */
+.mCustomScrollbar{-ms-touch-action: pinch-zoom; touch-action: pinch-zoom;}
+.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{-ms-touch-action: auto; touch-action: auto;}
+.mCustomScrollBox{position:relative; overflow:hidden; height:100%; width:100%; margin:0 auto; outline:none; direction:ltr;}
+.mCSB_container{overflow:hidden; width:auto; height:auto;}
+.mCSB_scrollTools{position:absolute; left:auto; top:0; right:6px; bottom:0; width:12px; height:auto; }
+.mCSB_scrollTools .mCSB_draggerContainer{position:absolute; top:0; left:0; bottom:0; right:0; height:auto; margin:8px 0;}
+.mCSB_scrollTools .mCSB_draggerRail{width:6px; height:100%; margin:0 auto;}
+.mCSB_scrollTools .mCSB_dragger{cursor:pointer; width:100%; height:30px; z-index:1;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative; width:6px; height:100%; margin:0 auto; text-align:center; border-radius:3px; background:rgba(82,71,210,0.2); transition:all .2s}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:12px; border-radius:6px;}
+
+.panel .mCSB_scrollTools{width:8px;}
+.panel .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:4px;}
+.panel .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:8px; border-radius:4px;}
+
+/* book detail */
+.panel{position:fixed; top:0; right:0; max-width:480px; height:100%; box-sizing:border-box; color:#5247d2; background:#fff;}
+.panel .inner{padding:60px 6.25vw 150px 5vw;}
+.panel .setting{position:fixed; bottom:0; right:0; width:480px; height:150px; box-sizing:border-box; border-top:1px solid rgba(82,71,210,0.2); background:#fff;}
+.panel .setting .btn{position:relative; margin:30px 0 0 5vw; width:264px; height:50px;}
+.panel .btn-option{position:relative; width:100%; height:50px; padding:0 0 0 46px; font-weight:700; color:#fff; text-align:left; line-height:50px; border:0; border-radius:8px; background:#5247d2;}
+.panel .btn-option svg{position:absolute; top:15px; left:16px; margin:0 10px 0 0;}
+.panel .btn-option svg path,
+.panel .btn-option svg rect{fill:#fff;}
+.panel .setting .saving{position:absolute; top:50%; right:16px; padding:0 14px 0 0; color:#fff; transform:translateY(-50%);}
+.panel .setting .arrow{position:absolute; top:3px; right:0;}
+.panel .setting .arrow path{fill:#fff;}
+.panel .btn-reset{width:100%; height:50px; margin:0 0 45px; color:#fff; border:0; border-radius:8px; background:#5247d2;}
+.modal-setting{position:fixed; top:50%; left:50%; z-index:100; display:none; width:512px; height:566px; color:#000; border-radius:16px; background:#fff; transform:translate(-50%, -50%);}
+.modal-setting .modal-inner{padding:35px 36px 64px;}
+.modal-setting .title-area{margin:0 0 38px;}
+.modal-setting h1{font-size:24px; font-weight:500; text-align:center;}
+.modal-setting .btn-modalClose{position:absolute; top:42px; left:36px; width:20px; height:20px;}
+.modal-setting .btn-modalClose path{fill:#1f1f48;}
+.modal-setting h2{font-size:14px; font-weight:400; color:#9b9bad;}
 
 @media all and (min-width:1921px){
   .book-item img{width:700px;}

@@ -61,7 +61,7 @@ $(function () {
 		}
 	});
 
-	$(document).on('click', '.btn-reset', function(){
+	$(document).on('click', '.btn-reset, .btn-end', function(){
 		location.href = '/gamebook/hell-escape/';
 		localStorage.removeItem('hellPageSave');
 		localStorage.removeItem('badMark');
@@ -69,22 +69,20 @@ $(function () {
 
 	$('.btn-go').on('click', function () {
 		var page = $('.go-page input').val();
-		$.cookie('hellPageSave', page, {
-			'expires': 365
-		});
+		localStorage.setItem('hellPageSave', page);
 		$.ajax({
 			url: 'page/' + page + '.html',
 			success: function (result) {
 				$('.content').html(result);
+				$('html, body').scrollTop(0);
 				$('.btn-sheet').removeClass('active');
 				if ($('.page[data-bad]').length) {
 					var num = parseInt($('.bad span').text());
 					var sum = $('.page').data('bad') + num;
 					$('.bad span').text(sum);
-					$.cookie('badMark', sum, {
-						'expires': 365
-					});
+					localStorage.setItem('badMark', sum);
 				}
+				var location = 'page/' + page + '.html';
 			}
 		});
 	});

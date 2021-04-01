@@ -39,7 +39,7 @@
 .sheet .btn-rotate{background:#1f1f48; background:#1f1f48 url(../images/btn_rotate.png) no-repeat center center;}
 .sheet .landscape .btn-wrap{right:-170px;}
 
-.go-page{position:absolute; top:0; left:0;}
+.go-page{position:absolute; top:0; left:50%; z-index:100;}
 
 /* mobile */
 @media all and (max-width:1024px){

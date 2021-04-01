@@ -1,7 +1,7 @@
 $(function () {
 
 	$('.content').mCustomScrollbar();
-	$('.char-info').mCustomScrollbar();
+	$('.panel').mCustomScrollbar();
 
 	var itemArr = [];
 	var ringArr = [];
