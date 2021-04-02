@@ -17,6 +17,11 @@ $(function () {
 	var ysRing = localStorage.getItem('ysRing');
 	var ysRingList = localStorage.getItem('ysRingList');
 	var check = localStorage.getItem('check');
+	var color = localStorage.getItem('color');
+	// console.log(color)
+
+	$('html').attr('data-color', color);
+	$('.color-select button[data-color="'+color+'"]').parent().addClass('active');
 
 	function pad(n) {
 	    return (n < 10 && n >= 0) ? ('0' + n) : n;
@@ -230,6 +235,13 @@ $(function () {
 	});
 	$('.btn-modalClose').click(function(){
 		$('.modal-setting').fadeOut();
+	});
+
+	$('.color-select button').click(function(){
+		var color = $(this).data('color');
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		$('html').attr('data-color', color);
+		localStorage.setItem('color', color);
 	});
 
 });

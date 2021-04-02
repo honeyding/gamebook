@@ -170,6 +170,13 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .modal-setting .reset p{float:left; margin:12px 0 0; color:#ddd;}
 .modal-setting .btn-reset{float:right; width:103px; height:40px; color:#fff; border-radius:20px; border:0; background:#5247d2;}
 
+html[data-color="blue"] .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#5c58bd;}
+html[data-color="blue"] .panel{color:#fff; background:#1f1f48;}
+html[data-color="blue"] .panel h2{color:#5c58bd;}
+html[data-color="blue"] .panel .setting{background:#1f1f48;}
+html[data-color="blue"] .panel .btn-option{background:#5c58bd;}
+
+
 @media all and (min-width:1921px){
   .book-item img{width:700px;}
 }

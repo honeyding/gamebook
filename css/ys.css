@@ -25,7 +25,7 @@
 .panel .status:after{clear:both; display:block; content:'';}
 .panel .status > div{float:left; width:50%;}
 .panel .status > div > div{position:relative;}
-.panel .status input[type="text"]{width:68px; height:80px; padding:0; font-size:56px; font-weight:700; text-align:right; color:#5247d2; border:0;}
+.panel .status input[type="text"]{width:68px; height:80px; padding:0; font-size:56px; font-weight:700; text-align:right; color:#5247d2; border:0; background:none;}
 .panel .status button{position:absolute; right:42px; width:12px; height:12px; overflow:hidden; text-indent:-9999px; border:0; background:none;}
 .panel .status .btn-plus{top:26px;}
 .panel .status .btn-plus:before{position:absolute; bottom:0; left:0; width:0; height:0; content:''; border:6px solid transparent; border-bottom:9px solid #958cff;}
@@ -52,3 +52,13 @@
 .check .checkbox input[type="checkbox"]{position:absolute; top:0; left:0; margin:0; padding:0; opacity:0;}
 .check .checkbox label{display:block; width:40px; height:40px; box-sizing:border-box; font-weight:500; color:rgba(82,71,210,0.2); line-height:36px; text-align:center; cursor:pointer; border-radius:8px; border:2px solid rgba(82, 71, 210, 0.2);}
 .check .checkbox input[type="checkbox"]:checked+label{font-weight:700; color:#fff; border:2px solid #5247d2; background:#5247d2;}
+
+html[data-color="blue"] .panel .status input[type="text"]{color:#fff;}
+html[data-color="blue"] .panel .status .btn-plus:before{border-bottom:9px solid #5c58bd;}
+html[data-color="blue"] .panel .status .btn-minus:before{border-top:9px solid #5c58bd;}
+html[data-color="blue"] .item-list .item,
+html[data-color="blue"] .item-list .select span,
+html[data-color="blue"] .item-list .etc dd{color:#1f1f48; border:0;}
+html[data-color="blue"] .item-list .option li{color:#1f1f48;}
+html[data-color="blue"] .check .checkbox label{color:rgba(255, 255, 255, 0.2); border-color:rgba(255, 255, 255, 0.2);}
+html[data-color="blue"] .check .checkbox input[type="checkbox"]:checked+label{border-color:#5c58bd; background:#5c58bd;}
