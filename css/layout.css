@@ -132,9 +132,10 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .panel .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:8px; border-radius:4px;}
 
 /* book detail */
-.panel{position:fixed; top:0; right:0; width:480px; height:100%; box-sizing:border-box; color:#5247d2; background:#fff;}
-.panel .inner{padding:68px 120px 150px 96px;}
-.panel .setting{position:fixed; bottom:0; right:0; width:480px; height:150px; box-sizing:border-box; border-top:1px solid rgba(82,71,210,0.2); background:#fff;}
+.panel{position:fixed; top:0; right:0; width:480px; height:calc(100% - 150px); box-sizing:border-box; color:#5247d2; background:#fff;}
+.panel .inner{padding:68px 120px 0 96px;}
+.panel .setting{position:fixed; bottom:0; right:0; width:480px; height:150px; box-sizing:border-box; background:#fff;}
+.panel .setting:before{position:absolute; top:5px; left:0; width:100%; height:1px; content:''; background:rgba(82,71,210,0.2);}
 .panel .setting .btn{position:relative; margin:30px 0 0 5vw; width:264px; height:50px;}
 .panel .btn-option{position:relative; width:100%; height:50px; padding:0 0 0 46px; font-weight:700; color:#fff; text-align:left; line-height:50px; border:0; border-radius:8px; background:#5247d2;}
 .panel .btn-option svg{position:absolute; top:15px; left:16px; margin:0 10px 0 0;}
@@ -151,6 +152,23 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .modal-setting .btn-modalClose{position:absolute; top:42px; left:36px; width:20px; height:20px;}
 .modal-setting .btn-modalClose path{fill:#1f1f48;}
 .modal-setting h2{margin:0 0 24px; font-size:14px; font-weight:400; color:#9b9bad;}
+.modal-setting .color-select{margin:0 0 48px; padding:0 0 48px; text-align:center; border-bottom:1px solid rgba(82,71,210,0.2);}
+.modal-setting .color-select > div{display:inline-block;}
+.modal-setting .color-select button{width:80px; height:80px; margin:0 30px 20px; font-weight:500; box-sizing:border-box; border-radius:8px;}
+.modal-setting .color-select button[data-color="white"]{color:#5247d2; border:2px solid #5247d2; background:#fff;}
+.modal-setting .color-select button[data-color="blue"]{color:#fff; border:0; background:#1f1f48;}
+.modal-setting .check{position:relative; display:block; width:24px; height:24px; box-sizing:border-box; margin:0 auto; border:2px solid rgba(82,71,210,0.2); border-radius:50%; background:#fff;}
+.modal-setting .check svg{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+.modal-setting .check path{fill:#fff;}
+.modal-setting .active .check{background:#5247d2;}
+.modal-setting .save{font-size:14px;}
+.modal-setting .autosave{margin:0 0 16px;}
+.modal-setting .autosave:after{clear:both; display:block; content:'';}
+.modal-setting .autosave p{float:left; font-weight:700;}
+.modal-setting .autosave div{float:right;}
+.modal-setting .reset:after{clear:both; display:block; content:'';}
+.modal-setting .reset p{float:left; margin:12px 0 0; color:#ddd;}
+.modal-setting .btn-reset{float:right; width:103px; height:40px; color:#fff; border-radius:20px; border:0; background:#5247d2;}
 
 @media all and (min-width:1921px){
   .book-item img{width:700px;}

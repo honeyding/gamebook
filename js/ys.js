@@ -224,4 +224,12 @@ $(function () {
 		$('.option').stop().slideUp(200);
 	});
 
+	//panel
+	$('.btn-option').click(function(){
+		$('.modal-setting').fadeIn();
+	});
+	$('.btn-modalClose').click(function(){
+		$('.modal-setting').fadeOut();
+	});
+
 });

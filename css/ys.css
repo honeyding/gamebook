@@ -44,7 +44,7 @@
 .item-list .option li:hover{background:rgba(82,71,210,0.1);}
 .item-list .etc{height:auto; margin:20px 0 0; padding:0;}
 .item-list .etc dt{overflow:hidden; text-indent:-9999px;}
-.item-list .etc dd{width:100%; min-height:80px; box-sizing:border-box; padding:8px 16px; border:2px solid rgba(82, 71, 210, 0.2); border-radius:4px; background:#fff;;}
+.item-list .etc dd{width:100%; min-height:115px; box-sizing:border-box; padding:8px 16px; border:2px solid rgba(82, 71, 210, 0.2); border-radius:4px; background:#fff;;}
 .check-wrap:after{clear:both; display:block; content:'';}
 .check .etc dt{float:none; width:100%; margin:0 0 5px;}
 .check .etc dd{float:none; width:100%; min-height:100px; box-sizing:border-box; padding:8px; line-height:1.6; border:1px solid #ccc; background:#fff;}
