@@ -132,7 +132,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .panel .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:8px; border-radius:4px;}
 
 /* book detail */
-.panel{position:fixed; top:0; right:0; width:480px; height:calc(100% - 150px); box-sizing:border-box; color:#5247d2; background:#fff;}
+.panel{position:fixed; top:0; right:0; width:480px; height:calc(100% - 150px); box-sizing:border-box; color:#5247d2; background:#fff; transition:all .2s;}
 .panel .inner{padding:68px 120px 0 96px;}
 .panel .setting{position:fixed; bottom:0; right:0; width:480px; height:150px; box-sizing:border-box; background:#fff;}
 .panel .setting:before{position:absolute; top:5px; left:0; width:100%; height:1px; content:''; background:rgba(82,71,210,0.2);}

@@ -18,10 +18,25 @@ $(function () {
 	var ysRingList = localStorage.getItem('ysRingList');
 	var check = localStorage.getItem('check');
 	var color = localStorage.getItem('color');
-	// console.log(color)
+	// var time = localStorage.getItem(time());
 
-	$('html').attr('data-color', color);
-	$('.color-select button[data-color="'+color+'"]').parent().addClass('active');
+	function time(){
+		// var dateInfo = new Date();
+		// var year = dateInfo.getFullYear();
+		// var month = dateInfo.getMonth() + 1;
+		// var date = dateInfo.getDate();
+		// var day = dateInfo.getDay();
+		// var hours = dateInfo.getHours();
+		// var minutes = dateInfo.getMinutes();
+
+		// return (year+'. '+month+'. '+date+'. '+hours+'. '+minutes);
+		// $('.autosave .date').text(year + '. ' + month + '. ' + date + '. ' + hours + '. ' + minutes);
+	}
+
+	if(color){
+		$('html').attr('data-color', color);
+		$('.color-select button[data-color="'+color+'"]').parent().addClass('active');
+	}
 
 	function pad(n) {
 	    return (n < 10 && n >= 0) ? ('0' + n) : n;
