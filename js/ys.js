@@ -35,7 +35,7 @@ $(function () {
 
 	if(color){
 		$('html').attr('data-color', color);
-		$('.color-select button[data-color="'+color+'"]').parent().addClass('active');
+		$('.color-select button[data-color="'+color+'"]').parent().addClass('active').siblings().removeClass('active');
 	}
 
 	function pad(n) {
