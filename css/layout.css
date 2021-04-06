@@ -125,11 +125,11 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .mCSB_scrollTools .mCSB_draggerRail{width:6px; height:100%; margin:0 auto;}
 .mCSB_scrollTools .mCSB_dragger{cursor:pointer; width:100%; height:30px; z-index:1;}
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative; width:6px; height:100%; margin:0 auto; text-align:center; border-radius:3px; background:rgba(82,71,210,0.2); transition:all .2s}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:12px; border-radius:6px;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:10px; border-radius:6px;}
 
-.panel .mCSB_scrollTools{width:8px;}
+/*.panel .mCSB_scrollTools{width:8px;}
 .panel .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:4px;}
-.panel .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:8px; border-radius:4px;}
+.panel .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover{width:8px; border-radius:4px;}*/
 
 /* book detail */
 .panel{position:fixed; top:0; right:0; width:480px; height:calc(100% - 150px); box-sizing:border-box; color:#5247d2; background:#fff; transition:all .2s;}
