@@ -3,7 +3,8 @@ $(function () {
 	$('.content').mCustomScrollbar();
 	$('.panel').mCustomScrollbar();
 
-	var color = localStorage.getItem('color');
+	var hellColor = localStorage.getItem('hellColor');
+	var hellDate = localStorage.getItem('hellDate');
 
 	var hellPageSave = localStorage.getItem('hellPageSave');
 	var badMark = localStorage.getItem('badMark');
@@ -25,9 +26,9 @@ $(function () {
 	// 	}
 	// });
 
-	if(color){
-		$('html').attr('data-color', color);
-		$('.color-select button[data-color="'+color+'"]').parent().addClass('active').siblings().removeClass('active');
+	if(hellColor){
+		$('html').attr('data-color', hellColor);
+		$('.color-select button[data-color="'+hellColor+'"]').parent().addClass('active').siblings().removeClass('active');
 	}
 
 	//page save
@@ -39,14 +40,27 @@ $(function () {
 				if (badMark) {
 					$('.bad p').text(badMark);
 				}
+				if(hellDate){
+					$('.autosave .date').text(hellDate);
+				}
 			}
 		});
 	}
 
 	//page
-	$(document).on('click', '.btn-start', function () {
-		$.removeCookie('hellPageSave, badMark');
-	});
+	// $(document).on('click', '.btn-start', function () {
+	// 	$.removeCookie('hellPageSave, badMark');
+	// });
+	function saveDate(){
+		var date = new Date();
+	    var year = date.getFullYear();
+	    var month = ("0" + (1 + date.getMonth())).slice(-2);
+	    var day = ("0" + date.getDate()).slice(-2);
+	    var hour = ("0" + date.getHours()).slice(-2);
+	    var minute = ("0" + date.getMinutes()).slice(-2);
+
+	    return year + '. ' + month + '. ' + day + '. ' + hour + ':' + minute;
+	}
 	$(document).on('click', '.btn-page', function () {
 		var pageIdx = $(this).data('next-page');
 		localStorage.setItem('hellPageSave', pageIdx);
@@ -63,6 +77,8 @@ $(function () {
 					localStorage.setItem('badMark', sum);
 				}
 				var location = 'page/' + pageIdx + '.html';
+				localStorage.setItem('hellDate', saveDate());
+				$('.autosave .date').text(saveDate());
 			}
 		});
 		if ($('.sheet > div').is(':visible')) {
@@ -74,6 +90,8 @@ $(function () {
 		location.href = '/gamebook/hell-escape/';
 		localStorage.removeItem('hellPageSave');
 		localStorage.removeItem('badMark');
+		localStorage.removeItem('hellDate');
+		$('.autosave .date').text('');
 	});
 
 	$('.btn-go').on('click', function () {
@@ -146,10 +164,10 @@ $(function () {
 	});
 
 	$('.color-select button').click(function(){
-		var color = $(this).data('color');
+		var hellColor = $(this).data('color');
 		$(this).parent().addClass('active').siblings().removeClass('active');
-		$('html').attr('data-color', color);
-		localStorage.setItem('color', color);
+		$('html').attr('data-color', hellColor);
+		localStorage.setItem('hellColor', hellColor);
 	});
 
 });

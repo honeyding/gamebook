@@ -3,7 +3,8 @@ $(function () {
 	$('.content').mCustomScrollbar();
 	$('.panel').mCustomScrollbar();
 
-	var color = localStorage.getItem('color');
+	var ysColor = localStorage.getItem('ysColor');
+	var ysDate = localStorage.getItem('ysDate');
 
 	var itemArr = [];
 	var ringArr = [];
@@ -34,9 +35,9 @@ $(function () {
 		// $('.autosave .date').text(year + '. ' + month + '. ' + date + '. ' + hours + '. ' + minutes);
 	}
 
-	if(color){
-		$('html').attr('data-color', color);
-		$('.color-select button[data-color="'+color+'"]').parent().addClass('active').siblings().removeClass('active');
+	if(ysColor){
+		$('html').attr('data-color', ysColor);
+		$('.color-select button[data-color="'+ysColor+'"]').parent().addClass('active').siblings().removeClass('active');
 	}
 
 	function pad(n) {
@@ -57,6 +58,17 @@ $(function () {
 		localStorage.setItem('check', checkArr);
 		// console.log(checkArr)
 	});
+
+	function saveDate(){
+		var date = new Date();
+	    var year = date.getFullYear();
+	    var month = ("0" + (1 + date.getMonth())).slice(-2);
+	    var day = ("0" + date.getDate()).slice(-2);
+	    var hour = ("0" + date.getHours()).slice(-2);
+	    var minute = ("0" + date.getMinutes()).slice(-2);
+
+	    return year + '. ' + month + '. ' + day + '. ' + hour + ':' + minute;
+	}
 
 	//page save
 	if (ysPageSave) {
@@ -102,6 +114,9 @@ $(function () {
 						}
 					}
 				}
+				if(ysDate){
+					$('.autosave .date').text(ysDate);
+				}
 			}
 		});
 	}
@@ -119,6 +134,8 @@ $(function () {
 		localStorage.removeItem('ysRing');
 		localStorage.removeItem('ysRingList');
 		localStorage.removeItem('check');
+		localStorage.removeItem('ysDate');
+		$('.autosave .date').text('');
 	});
 	$(document).on('click', '.btn-page', function () {
 		var pageIdx = $(this).data('next-page');
@@ -157,6 +174,8 @@ $(function () {
 					$('.etc dd').append('<div>' + getItem + '</div>');
 					localStorage.setItem('ysItem', itemArr);
 				}
+				localStorage.setItem('ysDate', saveDate());
+				$('.autosave .date').text(saveDate());
 			}
 		});
 	});
@@ -254,10 +273,10 @@ $(function () {
 	});
 
 	$('.color-select button').click(function(){
-		var color = $(this).data('color');
+		var ysColor = $(this).data('color');
 		$(this).parent().addClass('active').siblings().removeClass('active');
-		$('html').attr('data-color', color);
-		localStorage.setItem('color', color);
+		$('html').attr('data-color', ysColor);
+		localStorage.setItem('ysColor', ysColor);
 	});
 
 });
