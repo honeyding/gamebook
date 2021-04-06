@@ -3,6 +3,8 @@ $(function () {
 	$('.content').mCustomScrollbar();
 	$('.panel').mCustomScrollbar();
 
+	var color = localStorage.getItem('color');
+
 	var itemArr = [];
 	var ringArr = [];
 	var checkArr = [];
@@ -17,7 +19,6 @@ $(function () {
 	var ysRing = localStorage.getItem('ysRing');
 	var ysRingList = localStorage.getItem('ysRingList');
 	var check = localStorage.getItem('check');
-	var color = localStorage.getItem('color');
 	// var time = localStorage.getItem(time());
 
 	function time(){

@@ -137,7 +137,7 @@ button::-moz-focus-inner{padding: 0; border:0;} /* firefox bug fix */
 .setting{position:fixed; bottom:0; right:0; width:480px; height:150px; box-sizing:border-box; background:#fff;}
 .setting:before{position:absolute; top:5px; left:0; width:100%; height:1px; content:''; background:rgba(82,71,210,0.2);}
 .setting .btn{position:relative; margin:30px 0 0 5vw; width:264px; height:50px;}
-.setting .btn-option{position:relative; width:100%; height:50px; padding:0 0 0 46px; font-weight:700; color:#fff; text-align:left; line-height:50px; border:0; border-radius:8px; background:#5247d2;}
+.setting .btn-option{position:relative; width:100%; height:50px; padding:0 0 0 46px; color:#fff; text-align:left; line-height:50px; border:0; border-radius:8px; background:#5247d2;}
 .setting .btn-option svg{position:absolute; top:15px; left:16px; margin:0 10px 0 0;}
 .setting .btn-option svg path,
 .setting .btn-option svg rect{fill:#fff;}

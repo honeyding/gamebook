@@ -1,6 +1,10 @@
 $(function () {
 
-	var dark = localStorage.getItem('darkMode');
+	$('.content').mCustomScrollbar();
+	$('.panel').mCustomScrollbar();
+
+	var color = localStorage.getItem('color');
+
 	var hellPageSave = localStorage.getItem('hellPageSave');
 	var badMark = localStorage.getItem('badMark');
 
@@ -21,14 +25,19 @@ $(function () {
 	// 	}
 	// });
 
+	if(color){
+		$('html').attr('data-color', color);
+		$('.color-select button[data-color="'+color+'"]').parent().addClass('active').siblings().removeClass('active');
+	}
+
 	//page save
 	if (hellPageSave) {
 		$.ajax({
 			url: 'page/' + hellPageSave + '.html',
 			success: function (result) {
-				$('.content').html(result);
+				$('.content .inner').html(result);
 				if (badMark) {
-					$('.bad span').text(badMark);
+					$('.bad p').text(badMark);
 				}
 			}
 		});
@@ -44,13 +53,13 @@ $(function () {
 		$.ajax({
 			url: 'page/' + pageIdx + '.html',
 			success: function (result) {
-				$('.content').html(result);
+				$('.content .inner').html(result);
 				$('html, body').scrollTop(0);
 				$('.btn-sheet').removeClass('active');
 				if ($('.page[data-bad]').length) {
-					var num = parseInt($('.bad span').text());
+					var num = parseInt($('.bad p').text());
 					var sum = $('.page').data('bad') + num;
-					$('.bad span').text(sum);
+					$('.bad p').text(sum);
 					localStorage.setItem('badMark', sum);
 				}
 				var location = 'page/' + pageIdx + '.html';
@@ -73,13 +82,13 @@ $(function () {
 		$.ajax({
 			url: 'page/' + page + '.html',
 			success: function (result) {
-				$('.content').html(result);
+				$('.content .inner').html(result);
 				$('html, body').scrollTop(0);
 				$('.btn-sheet').removeClass('active');
 				if ($('.page[data-bad]').length) {
-					var num = parseInt($('.bad span').text());
+					var num = parseInt($('.bad p').text());
 					var sum = $('.page').data('bad') + num;
-					$('.bad span').text(sum);
+					$('.bad p').text(sum);
 					localStorage.setItem('badMark', sum);
 				}
 				var location = 'page/' + page + '.html';
@@ -126,6 +135,21 @@ $(function () {
 			$('.btn-sheet').removeClass('active');
 			$('.sheet').fadeOut();
 		}
+	});
+
+	//panel
+	$('.btn-option').click(function(){
+		$('.modal-setting').fadeIn();
+	});
+	$('.btn-modalClose').click(function(){
+		$('.modal-setting').fadeOut();
+	});
+
+	$('.color-select button').click(function(){
+		var color = $(this).data('color');
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		$('html').attr('data-color', color);
+		localStorage.setItem('color', color);
 	});
 
 });
