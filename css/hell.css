@@ -3,8 +3,6 @@
 .hell-wrap{position:relative; height:100%; font-size:14px; background:#ededf1;}
 
 /* header */
-.header{position:fixed; top:0; left:0; width:275px; height:100%; z-index:2; background:#ededf1;}
-.header:after{clear:both; display:block; content:'';}
 .logo{float:left; padding:10px;}
 .logo img{width:170px;}
 
@@ -18,11 +16,11 @@
 .sheet-btn button.active{font-weight:700; color:#fff; background:#5247d2;}
 
 /* page */
-.content{position:relative; height:100%; padding:0 480px 0 0;}
-.content .inner{padding:68px 0;}
+.content{position:relative; height:100%; overflow:hidden; padding:0 480px 0 0;}
+/*.content .inner{padding:68px 0;}*/
 
-.page{position:relative; max-width:644px; width:100%; margin:0 auto; text-align:center; background:#fff;}
-.page img{max-width:640px;}
+.page{position:relative; max-width:644px; width:100%; margin:68px auto; text-align:center; background:#fff;}
+.page img{width:100%;}
 .page .btn-page{margin:0; padding:0; border:0; background:none;}
 .btn-area{position:absolute; bottom:26px; right:60px; width:180px;}
 .btn-area .btn-page{width:180px; height:30px; overflow:hidden; margin:8px 0 0; text-indent:-9999px;}
@@ -44,8 +42,52 @@ html[data-color="blue"] .bad p{border-left:1px solid #c4c4cf;;}
 html[data-color="blue"] .sheet-btn button{color:#1f1f48; border:0; background:#4c4c6d;}
 html[data-color="blue"] .sheet-btn button.active{color:#fff; background:#5247d2;}
 
+@media all and (max-width:1200px){
+    .content{padding-right:25vw;}
+    .page{max-width:90%;}
+
+    .bad{padding:10px 0 10px 50%; font-size:30px; background:#fff url(../images/hell/bad.svg) no-repeat 2.5vw center; background-size:40px auto;}
+    .sheet-btn button{width:10vw; height:10vw; font-size:30px;}
+    .sheet-btn button[data-sheet="a"]{float:left; margin:0;}
+    .sheet-btn button[data-sheet="b"]{float:right;}
+    .sheet > div,
+    .sheet div img{width:39vw;}
+
+    html[data-color="blue"] .bad{color:#000; border:0; background:#fff url(../images/hell/bad_black.svg) no-repeat 2.5vw center; background-size:40px auto;}
+}
+@media all and (max-width:768px){
+    .content{padding:0;}
+    .content .inner{padding:100px 0 0;}
+    .page{max-width:100%; margin:0;}
+
+    .panel{top:50px; left:0; z-index:10; width:100%; height:50px; padding:0 0 0 100px; border-top:1px solid rgba(255, 255, 255, .2); background:none;}
+    .panel.mCustomScrollbar{padding:0;}
+    .panel .inner{padding:0 0 0 0;}
+    .bad{position:absolute; top:0; left:0; width:100px; margin:0; padding:0 0 0 26px; color:#fff; border:0; background:url(../images/hell/bad_white.svg) no-repeat 18px center; background-size:28px auto;}
+    .bad p{height:50px; font-size:20px; line-height:50px; border-left:0;}
+    .sheet-btn{float:right;}
+    .sheet-btn h2{float:left; margin:16px 20px 0 20px; color:#fff;}
+    .sheet-btn button{width:32px; height:32px; font-size:18px; color:rgb(82 71 210); line-height:32px; border:0;}
+    .sheet-btn button[data-sheet="a"],
+    .sheet-btn button[data-sheet="b"]{float:left; margin:8px 15px 0 0;}
+    .sheet > div,
+    .sheet div img{width:58vw;}
+    .sheet > div{top:20%; left:15%;}
+    .sheet .btn-wrap{right:-65px; width:50px;}
+    .sheet .landscape .btn-wrap{right:-110px;}
+    .sheet button{width:50px; height:50px;}
+    .sheet .btn-sheetClose{margin:0 0 40px;}
+    .sheet .btn-sheetClose svg{width:15px; height:15px;}
+    .sheet .btn-rotate svg{width:18px; height:18px;}
+
+    .btn-area{bottom:4vw; right:10vw; width:30vw;}
+    .btn-area .btn-page{width:100%; height:4.7vw; margin:1.1vw 0 0;}
+
+    .modal-setting .color{display:none;}
+}
+
 /* mobile */
-@media all and (max-width:1024px){
+/*@media all and (max-width:1024px){
     .page{top:0; transform:translateX(-50%);}
 }
 @media all and (max-width:768px){
@@ -74,4 +116,4 @@ html[data-color="blue"] .sheet-btn button.active{color:#fff; background:#5247d2;
     .sheet .btn-sheetClose{margin-bottom:50px; background-size:12px auto;}
     .sheet .btn-rotate{background-size:15px auto;}
     .sheet .landscape .btn-wrap{right:-105px;}
-}
+}*/

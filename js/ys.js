@@ -1,7 +1,21 @@
+var isMobile;
+var filter = "win16|win32|win64|mac|macintel";
+if(navigator.platform){
+    if(filter.indexOf(navigator.platform.toLowerCase()) < 0){
+        //mobile
+        isMobile = true;
+    } else{
+        //pc
+        isMobile = false;
+    }
+}
+// isMobile = true;
 $(function () {
 
-	$('.content').mCustomScrollbar();
-	$('.panel').mCustomScrollbar();
+	if(!isMobile){
+		$('.content').mCustomScrollbar();
+		$('.panel').mCustomScrollbar();
+	}
 
 	var ysColor = localStorage.getItem('ysColor');
 	var ysDate = localStorage.getItem('ysDate');
@@ -20,20 +34,6 @@ $(function () {
 	var ysRing = localStorage.getItem('ysRing');
 	var ysRingList = localStorage.getItem('ysRingList');
 	var check = localStorage.getItem('check');
-	// var time = localStorage.getItem(time());
-
-	function time(){
-		// var dateInfo = new Date();
-		// var year = dateInfo.getFullYear();
-		// var month = dateInfo.getMonth() + 1;
-		// var date = dateInfo.getDate();
-		// var day = dateInfo.getDay();
-		// var hours = dateInfo.getHours();
-		// var minutes = dateInfo.getMinutes();
-
-		// return (year+'. '+month+'. '+date+'. '+hours+'. '+minutes);
-		// $('.autosave .date').text(year + '. ' + month + '. ' + date + '. ' + hours + '. ' + minutes);
-	}
 
 	if(ysColor){
 		$('html').attr('data-color', ysColor);
@@ -277,6 +277,14 @@ $(function () {
 		$(this).parent().addClass('active').siblings().removeClass('active');
 		$('html').attr('data-color', ysColor);
 		localStorage.setItem('ysColor', ysColor);
+	});
+	$('.btn-panel button').click(function(){
+		if($(window).width() <= 768){
+			$('.btn-panel').addClass('open').animate({
+				top: '0'
+			}, 200);
+			$('.panel').show();
+		}
 	});
 
 });
